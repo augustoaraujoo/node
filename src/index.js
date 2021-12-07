@@ -14,7 +14,7 @@ function verifyIfExistsAccountCPF(request, response, next) {
 
     if (!customer) {
         return response.status(400).json({ error: 'Customer not found' })
-    } 
+    }
 
     request.customer = customer;
     return next()
